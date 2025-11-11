@@ -1,0 +1,39 @@
+/* temples-large.css */
+
+/* Tablet and larger screens */
+@media (min-width: 700px) {
+  /* Hide hamburger */
+  .hamburger {
+    display: none;
+  }
+
+  /* Show the navigation menu in a row */
+  .site-nav {
+    display: block;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-list li {
+    margin: 0;
+  }
+
+  /* Make gallery show 2 columns at this size */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop and larger */
+@media (min-width: 1024px) {
+
+  /* Now show 3 columns */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
