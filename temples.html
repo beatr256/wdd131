@@ -1,88 +1,101 @@
 <!doctype html>
-<span class="hamburger-icon">☰</span>
-</button>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Temple Album</title>
 
-<nav id="site-nav" class="site-nav" role="navigation">
-<ul class="nav-list">
-<li><a href="#">Home</a></li>
-<li><a href="#">Old</a></li>
-<li><a href="#">New</a></li>
-<li><a href="#">Large</a></li>
-<li><a href="#">Small</a></li>
-</ul>
-</nav>
-</div>
-</header>
+  <meta name="description" content="A collection of LDS temples displayed in a responsive gallery layout.">
+  <meta name="author" content="Your Name">
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-<main class="container" id="main">
-<h1>Beautiful Temples Around the World</h1>
+  <!-- CSS (Mobile-first first) -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
 
+  <!-- JavaScript -->
+  <script defer src="scripts/temples.js"></script>
+</head>
 
-<section class="gallery" aria-label="Temple gallery">
-<!-- Nine figures (swap src paths for your images) -->
-<figure>
-<img src="images/temple1.jpg" alt="Temple 1" loading="lazy">
-<figcaption>Temple One</figcaption>
-</figure>
+<body>
 
+  <header>
+    <h1>Temple Album</h1>
 
-<figure>
-<img src="images/temple2.jpg" alt="Temple 2" loading="lazy">
-<figcaption>Temple Two</figcaption>
-</figure>
+    <button id="hamburger">☰</button>
 
+    <nav id="site-nav">
+      <a href="#">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
 
-<figure>
-<img src="images/temple3.jpg" alt="Temple 3" loading="lazy">
-<figcaption>Temple Three</figcaption>
-</figure>
+  <main>
+    <h2>Temples Around the World</h2>
 
+    <section class="gallery">
 
-<figure>
-<img src="images/temple4.jpg" alt="Temple 4" loading="lazy">
-<figcaption>Temple Four</figcaption>
-</figure>
+      <!-- Use placeholder images for now -->
+      <figure>
+        <img src="images/temple1.jpg" alt="Temple 1">
+        <figcaption>Temple One</figcaption>
+      </figure>
 
+      <figure>
+        <img src="images/temple2.jpg" alt="Temple 2">
+        <figcaption>Temple Two</figcaption>
+      </figure>
 
-<figure>
-<img src="images/temple5.jpg" alt="Temple 5" loading="lazy">
-<figcaption>Temple Five</figcaption>
-</figure>
+      <figure>
+        <img src="images/temple3.jpg" alt="Temple 3">
+        <figcaption>Temple Three</figcaption>
+      </figure>
 
+      <figure>
+        <img src="images/temple4.jpg" alt="Temple 4">
+        <figcaption>Temple Four</figcaption>
+      </figure>
 
-<figure>
-<img src="images/temple6.jpg" alt="Temple 6" loading="lazy">
-<figcaption>Temple Six</figcaption>
-</figure>
+      <figure>
+        <img src="images/temple5.jpg" alt="Temple 5">
+        <figcaption>Temple Five</figcaption>
+      </figure>
 
+      <figure>
+        <img src="images/temple6.jpg" alt="Temple 6">
+        <figcaption>Temple Six</figcaption>
+      </figure>
 
-<figure>
-<img src="images/temple7.jpg" alt="Temple 7" loading="lazy">
-<figcaption>Temple Seven</figcaption>
-</figure>
+      <figure>
+        <img src="images/temple7.jpg" alt="Temple 7">
+        <figcaption>Temple Seven</figcaption>
+      </figure>
 
+      <figure>
+        <img src="images/temple8.jpg" alt="Temple 8">
+        <figcaption>Temple Eight</figcaption>
+      </figure>
 
-<figure>
-<img src="images/temple8.jpg" alt="Temple 8" loading="lazy">
-<figcaption>Temple Eight</figcaption>
-</figure>
+      <figure>
+        <img src="images/temple9.jpg" alt="Temple 9">
+        <figcaption>Temple Nine</figcaption>
+      </figure>
 
+    </section>
+  </main>
 
-<figure>
-<img src="images/temple9.jpg" alt="Temple 9" loading="lazy">
-<figcaption>Temple Nine</figcaption>
-</figure>
-</section>
-</main>
+  <footer>
+    <p>&copy; <span id="current-year"></span> Your Name</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
 
-
-<footer class="site-footer">
-<div class="footer-inner">
-<p>&copy; <span id="current-year">2025</span> Hellen Beatrice Aplolt — All rights reserved.</p>
-<p>Last modified: <span id="last-modified">(unknown)</span></p>
-</div>
-</footer>
 </body>
 </html>
