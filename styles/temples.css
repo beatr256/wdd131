@@ -1,60 +1,111 @@
-/* Mobile-first base styles */
-:root{
---bg:#f7f6f3;
---card:#ffffff;
---accent:#5b6dff;
---muted:#6b6b6b;
---max-width:1100px;
---radius:12px;
-font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-margin:0;
-background:var(--bg);
-color:#222;
--webkit-font-smoothing:antialiased;
+/* ========== Base Styles ========== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Nunito", sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  line-height: 1.4;
+  padding: 0 1rem;
+}
 
-.header-inner, .footer-inner{max-width:var(--max-width);margin:0 auto;padding:0.75rem 1rem;display:flex;align-items:center;justify-content:space-between}
+/* ========== Header ========== */
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
 
-.site-header{background:var(--card);box-shadow:0 2px 4px rgba(0,0,0,0.05);position:sticky;top:0;z-index:40}
-.site-title{font-family:'Playfair Display', serif;margin:0;font-weight:700;font-size:1.125rem}
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+}
 
+/* Hamburger shown on mobile */
+#hamburger {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
-/* Hamburger */
-.hamburger{background:none;border:0;font-size:1.6rem;padding:0.25rem;cursor:pointer}
-.hamburger:focus{outline:2px solid var(--accent);border-radius:6px}
+/* Navigation (mobile collapsed) */
+nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
 
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+}
 
-/* Navigation - mobile: hidden by default, revealed by JS */
-.site-nav{display:none}
-.site-nav.show{display:block}
-.nav-list{list-style:none;margin:0;padding:0.5rem 1rem}
-.nav-list li{margin:0.25rem 0}
-.nav-list a{display:block;padding:0.5rem 0.75rem;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600}
-.nav-list a:hover, .nav-list a:focus{background:rgba(91,109,255,0.08);color:var(--accent)}
+nav a:hover {
+  color: #0066cc;
+}
 
+/* Toggle class to show nav on mobile */
+nav.show {
+  display: flex;
+}
 
-/* Main container */
-.container{max-width:var(--max-width);margin:1.25rem auto;padding:0 1rem}
-.container h1{font-family:'Playfair Display', serif;margin:0 0 1rem;font-size:1.5rem}
+/* ========== Main Content ========== */
 
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem 0;
+}
 
-/* Gallery grid - mobile: 1 column */
-.gallery{display:grid;grid-template-columns:1fr;gap:1rem}
-.gallery figure{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.04);margin:0}
-.gallery img{width:100%;height:auto;display:block}
-.gallery figcaption{padding:0.5rem 0.75rem;font-size:0.95rem;color:var(--muted)}
+main h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: "Playfair Display", serif;
+}
 
+/* Temple image grid */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
 
-/* Footer */
-.site-footer{margin-top:2rem}
-.site-footer p{margin:0;padding:0.5rem 1rem;text-align:center;color:var(--muted);font-size:0.9rem}
+figure {
+  background: white;
+  border-radius: 6px;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
 
+figure img {
+  width: 100%;
+  border-radius: 6px;
+}
 
-/* Accessibility helpers */
-@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+figcaption {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* ========== Footer ========== */
+
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}

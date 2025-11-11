@@ -6,96 +6,91 @@
 
   <title>Temple Album</title>
 
-  <meta name="description" content="A collection of LDS temples displayed in a responsive gallery layout.">
+  <meta name="description" content="A collection of temples displayed in a responsive album layout.">
   <meta name="author" content="Your Name">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- CSS (Mobile-first first) -->
   <link rel="stylesheet" href="styles/temples.css">
   <link rel="stylesheet" href="styles/temples-large.css">
 
-  <!-- JavaScript -->
   <script defer src="scripts/temples.js"></script>
 </head>
 
 <body>
 
-  <header>
-    <h1>Temple Album</h1>
+<header>
+  <h1>Temple Album</h1>
+  <button id="hamburger" aria-label="Menu">☰</button>
 
-    <button id="hamburger">☰</button>
+  <nav id="site-nav">
+    <a href="#">Home</a>
+    <a href="#">Old</a>
+    <a href="#">New</a>
+    <a href="#">Large</a>
+    <a href="#">Small</a>
+  </nav>
+</header>
 
-    <nav id="site-nav">
-      <a href="#">Home</a>
-      <a href="#">Old</a>
-      <a href="#">New</a>
-      <a href="#">Large</a>
-      <a href="#">Small</a>
-    </nav>
-  </header>
+<main>
+  <h2>Temples Around the World</h2>
 
-  <main>
-    <h2>Temples Around the World</h2>
+  <section class="gallery">
+    <!-- Replace images later -->
+    <figure>
+      <img src="images/temple1.jpg" alt="Temple 1">
+      <figcaption>Temple One</figcaption>
+    </figure>
 
-    <section class="gallery">
+    <figure>
+      <img src="images/temple2.jpg" alt="Temple 2">
+      <figcaption>Temple Two</figcaption>
+    </figure>
 
-      <!-- Use placeholder images for now -->
-      <figure>
-        <img src="images/temple1.jpg" alt="Temple 1">
-        <figcaption>Temple One</figcaption>
-      </figure>
+    <figure>
+      <img src="images/temple3.jpg" alt="Temple 3">
+      <figcaption>Temple Three</figcaption>
+    </figure>
 
-      <figure>
-        <img src="images/temple2.jpg" alt="Temple 2">
-        <figcaption>Temple Two</figcaption>
-      </figure>
+    <figure>
+      <img src="images/temple4.jpg" alt="Temple 4">
+      <figcaption>Temple Four</figcaption>
+    </figure>
 
-      <figure>
-        <img src="images/temple3.jpg" alt="Temple 3">
-        <figcaption>Temple Three</figcaption>
-      </figure>
+    <figure>
+      <img src="images/temple5.jpg" alt="Temple 5">
+      <figcaption>Temple Five</figcaption>
+    </figure>
 
-      <figure>
-        <img src="images/temple4.jpg" alt="Temple 4">
-        <figcaption>Temple Four</figcaption>
-      </figure>
+    <figure>
+      <img src="images/temple6.jpg" alt="Temple 6">
+      <figcaption>Temple Six</figcaption>
+    </figure>
 
-      <figure>
-        <img src="images/temple5.jpg" alt="Temple 5">
-        <figcaption>Temple Five</figcaption>
-      </figure>
+    <figure>
+      <img src="images/temple7.jpg" alt="Temple 7">
+      <figcaption>Temple Seven</figcaption>
+    </figure>
 
-      <figure>
-        <img src="images/temple6.jpg" alt="Temple 6">
-        <figcaption>Temple Six</figcaption>
-      </figure>
+    <figure>
+      <img src="images/temple8.jpg" alt="Temple 8">
+      <figcaption>Temple Eight</figcaption>
+    </figure>
 
-      <figure>
-        <img src="images/temple7.jpg" alt="Temple 7">
-        <figcaption>Temple Seven</figcaption>
-      </figure>
+    <figure>
+      <img src="images/temple9.jpg" alt="Temple 9">
+      <figcaption>Temple Nine</figcaption>
+    </figure>
 
-      <figure>
-        <img src="images/temple8.jpg" alt="Temple 8">
-        <figcaption>Temple Eight</figcaption>
-      </figure>
+  </section>
+</main>
 
-      <figure>
-        <img src="images/temple9.jpg" alt="Temple 9">
-        <figcaption>Temple Nine</figcaption>
-      </figure>
-
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; <span id="current-year"></span> Your Name</p>
-    <p>Last Modified: <span id="last-modified"></span></p>
-  </footer>
+<footer>
+  <p>&copy; <span id="current-year"></span> Your Name</p>
+  <p>Last Modified: <span id="last-modified"></span></p>
+</footer>
 
 </body>
 </html>
