@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Discover Uganda — Place Page</title>
+
+  <!-- Link stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Defer JavaScript -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Discover Uganda</h1>
+      <p class="tagline">Explore the pearl of Africa</p>
+    </div>
+  </header>
+
+  <!-- HERO with responsive images using srcset / picture element -->
+  <main id="main">
+    <section class="hero" aria-label="Hero">
+      <picture>
+        <!-- large screens -->
+        <source srcset="images/hero-large.webp" media="(min-width: 800px)">
+        <!-- fallback small -->
+        <img src="images/hero-small.webp" alt="Landscape view of Uganda - rolling hills and lake" />
+      </picture>
+      <div class="hero-caption">
+        <h2>Uganda</h2>
+        <p>A country of stunning lakes, mountains, and wildlife.</p>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <article class="about">
+        <h3>About</h3>
+        <p>
+          Uganda is located in East Africa and is known for its diverse landscapes and wildlife — from the
+          snow-capped Rwenzori Mountains to the vast Lake Victoria. It has a rich cultural heritage and friendly communities.
+        </p>
+      </article>
+
+      <!-- Weather box: mobile uses SVG icon, wide uses a pseudo-element emoji -->
+      <aside class="weather" aria-label="Weather">
+        <!-- mobile icon (inline SVG file recommended, here we embed minimal example) -->
+        <div class="weather-top">
+          <h3>Weather</h3>
+          <span class="weather-icon-mobile" aria-hidden="true">
+            <!-- Example SVG (save a real SVG file and reference it instead if preferred) -->
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M3 15a4 4 0 014-4h1.26A5 5 0 0116 12.9 3.5 3.5 0 0119.5 16H19" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <circle cx="12" cy="8" r="2" stroke="currentColor" stroke-width="1.2" fill="none"></circle>
+            </svg>
+          </span>
+        </div>
+
+        <div class="weather-stats">
+          <p>Temperature: <strong id="temp">8</strong>°C</p>
+          <p>Wind speed: <strong id="wind">20</strong> km/h</p>
+          <p>Windchill: <strong id="windchill">—</strong></p>
+        </div>
+      </aside>
+
+      <article class="gallery">
+        <h3>Highlights</h3>
+        <ul>
+          <li>Gorilla trekking in Bwindi</li>
+          <li>Lake Victoria</li>
+          <li>Queen Elizabeth National Park wildlife</li>
+          <li>Rivers & waterfalls</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Discover Uganda</p>
+    <p>Document last modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

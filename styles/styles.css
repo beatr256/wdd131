@@ -1,0 +1,138 @@
+/* Global variables */
+:root{
+  --accent: #006400;         /* deep green */
+  --accent-2: #f0a500;       /* warm accent */
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --max-width: 1000px;
+  --gap: 1rem;
+  --radius: 12px;
+  --card-padding: 1rem;
+  --font-sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Basic reset-ish */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font-sans);
+  color:var(--text);
+  background:linear-gradient(180deg,#fcfff9 0%, #f7fbf8 100%);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+}
+
+.site-header{
+  background: linear-gradient(90deg,var(--accent) 0%, #2e8b57 100%);
+  color:white;
+  padding:1rem;
+  text-align:left;
+}
+.brand h1{margin:0;font-size:1.25rem}
+.brand .tagline{margin:0;font-size:0.9rem;opacity:.95}
+
+/* HERO */
+.hero{
+  position:relative;
+  max-width:var(--max-width);
+  margin:1rem auto;
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+.hero img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.hero-caption{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:1rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 100%);
+  color:white;
+}
+.hero-caption h2{margin:0 0 .25rem 0;font-size:1.5rem}
+.hero-caption p{margin:0;font-size:0.95rem;opacity:0.95}
+
+/* Main grid */
+.content-grid{
+  max-width:var(--max-width);
+  margin:1rem auto;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:var(--gap);
+  padding:0 1rem;
+}
+
+/* Cards */
+.about, .weather, .gallery{
+  background:white;
+  border-radius:10px;
+  padding:var(--card-padding);
+  box-shadow:0 6px 16px rgba(0,0,0,.04);
+}
+
+/* Weather specifics */
+.weather{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.weather-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.weather-top h3{margin:0}
+.weather-icon-mobile{display:inline-block}
+.weather-stats p{margin:.25rem 0;color:var(--muted)}
+
+/* Footer */
+.site-footer{
+  max-width:var(--max-width);
+  margin:1.25rem auto;
+  padding:0 1rem 2rem 1rem;
+  color:var(--muted);
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  align-items:center;
+}
+
+/* Larger screens: two-column layout and weather pseudo-element emoji */
+@media (min-width: 800px){
+  .content-grid{
+    grid-template-columns: 1fr 320px; /* main column + sidebar */
+    align-items:start;
+  }
+
+  .gallery{grid-column:1/2}
+  /* show the weather as a card in the sidebar and add an emoji after the H3 using pseudo-element */
+  .weather h3::after{
+    content: " ⛅"; /* added as requirement via pseudo-element */
+    margin-left:.5rem;
+    font-size:1.1rem;
+  }
+
+  /* hide the embedded SVG mobile icon on wide screens (use pseudo-element instead) */
+  .weather-icon-mobile{display:none}
+  .weather{position:sticky; top:1.25rem}
+
+  .hero-caption h2{font-size:2rem}
+}
+
+/* Accessibility: focus outlines */
+a:focus, button:focus, input:focus {outline:3px solid var(--accent-2); outline-offset:2px}
+
+/* Simple typography scaling */
+h1,h2,h3{line-height:1.15}
+h3{font-size:1.1rem}
+
+/* small adjustments for readability */
+.about p, .gallery ul{color:#2b2b2b}
+.gallery ul{padding-left:1.25rem}
