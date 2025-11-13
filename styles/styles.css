@@ -1,102 +1,158 @@
-/* Root variables for consistent colors and spacing */
+/* =========================
+   :root - CSS Variables
+========================= */
 :root {
-  --primary-color: #006400;      /* Dark green */
-  --secondary-color: #f4f4f4;    /* Light background */
-  --text-color: #333333;         /* Neutral text */
-  --accent-color: #ffcc00;       /* Warm highlight */
+  --primary-color: #2c3e50;
+  --secondary-color: #16a085;
+  --accent-color: #f39c12;
+  --background-color: #f9f9f9;
+  --text-color: #333;
   --max-width: 1200px;
-  --font-family: Arial, Helvetica, sans-serif;
+  --gap: 1.5rem;
+  --font-family: 'Arial', sans-serif;
 }
 
-/* Reset some default browser styles */
+/* =========================
+   Global Styles
+========================= */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: var(--font-family);
   color: var(--text-color);
-  background-color: var(--secondary-color);
+  background-color: var(--background-color);
   line-height: 1.6;
 }
 
-/* Header styling */
-header {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   Header
+========================= */
+.site-header {
   background-color: var(--primary-color);
   color: white;
   padding: 1rem 2rem;
   text-align: center;
 }
 
-/* Decorative line below header */
-header::after {
+.site-header h1 {
+  font-size: 2rem;
+}
+
+.site-header .tagline {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-caption {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: rgba(0,0,0,0.4);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+
+/* ::after pseudo-element example */
+.hero-caption::after {
   content: "";
   display: block;
-  height: 3px;
+  width: 60px;
+  height: 4px;
   background-color: var(--accent-color);
-  margin-top: 0.5rem;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
 
-/* Navigation bar using Flexbox */
-nav {
+/* =========================
+   Content Grid
+========================= */
+.content-grid {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  background-color: var(--primary-color);
-  padding: 0.5rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: var(--accent-color);
-}
-
-/* Main content area */
-main {
+  flex-direction: column;
+  gap: var(--gap);
+  padding: 2rem;
   max-width: var(--max-width);
-  margin: 2rem auto;
+  margin: 0 auto;
+}
+
+.content-grid article,
+.content-grid aside {
+  background-color: white;
   padding: 1rem;
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Example section/card styling */
-section {
-  background: white;
-  border-radius: 10px;
+.content-grid h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Weather Box
+========================= */
+.weather {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.weather-stats p {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Footer
+========================= */
+.site-footer {
+  text-align: center;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* Footer styling */
-footer {
   background-color: var(--primary-color);
   color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  font-size: 0.9rem;
 }
 
-/* Responsive design */
-@media (max-width: 800px) {
-  header {
-    font-size: 1.2rem;
+/* =========================
+   Media Queries
+========================= */
+@media (min-width: 800px) {
+  .content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .site-header h1 {
+    font-size: 1.5rem;
   }
 
-  nav {
-    flex-direction: column;
-  }
-
-  main {
-    grid-template-columns: 1fr;
-    padding: 0.5rem;
+  .hero-caption {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 }
