@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temple Gallery</title>
+  <title>Temple Album</title>
+  <meta name="description" content="A gallery of temples with filtering options by date and size.">
+  <meta name="author" content="Hellen Beatrice Apolot">
   <link rel="stylesheet" href="styles/filtered-temples.css">
 </head>
 <body>
   <header>
-    <h1>Temple Gallery</h1>
+    <h1>Temple Album</h1>
     <nav>
       <ul>
-        <li><button id="home">Home</button></li>
-        <li><button id="old">Old</button></li>
-        <li><button id="new">New</button></li>
-        <li><button id="large">Large</button></li>
-        <li><button id="small">Small</button></li>
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="old">Old</a></li>
+        <li><a href="#" id="new">New</a></li>
+        <li><a href="#" id="large">Large</a></li>
+        <li><a href="#" id="small">Small</a></li>
       </ul>
     </nav>
   </header>
@@ -27,10 +29,10 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> My Temple Gallery</p>
+    <p>&copy; <span id="year"></span> Hellen Beatrice Apolot</p>
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 
-  <script src="filtered-temples.js"></script>
+  <script src="scripts/filtered-temples.js" defer></script>
 </body>
 </html>

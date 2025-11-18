@@ -22,16 +22,16 @@ nav li {
   margin: 0 10px;
 }
 
-nav button {
+nav a {
   padding: 5px 10px;
-  border: none;
+  text-decoration: none;
   background-color: #0073e6;
   color: white;
-  cursor: pointer;
   border-radius: 5px;
+  display: inline-block;
 }
 
-nav button:hover {
+nav a:hover {
   background-color: #005bb5;
 }
 
@@ -62,4 +62,11 @@ nav button:hover {
 
 .temple-card p {
   margin: 0.25rem 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .temple-cards {
+    grid-template-columns: 1fr;
+  }
 }
