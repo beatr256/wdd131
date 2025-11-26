@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Site Plan — StudyHub</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #f9fafb;
+      --color-surface: #ffffff;
+      --color-primary: #2563EB;
+      --color-accent: #FBBF24;
+      --color-text: #1F2937;
+      --color-muted: #4B5563;
+      --max-width: 900px;
+    }
+    body {
+      margin:0; font-family:'Roboto', sans-serif; background:var(--color-bg); color:var(--color-text); padding:28px; display:flex; justify-content:center;
+    }
+    .container{max-width:var(--max-width); width:100%;}
+    header{display:flex; gap:16px; align-items:center;}
+    .logo{display:flex; gap:12px; align-items:center; text-decoration:none; color:inherit}
+    .logo svg{width:64px;height:64px}
+    h1{font-family:'Merriweather', serif; margin:0; font-size:1.5rem}
+    p.lead{margin:6px 0 18px; color:var(--color-muted)}
+    section{background:var(--color-surface); padding:18px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); margin-bottom:18px}
+    h2{margin-top:0; color:var(--color-primary)}
+    ul.scenarios{margin:8px 0 0; padding-left:18px}
+    .swatches{display:flex; gap:12px; align-items:center; margin-top:10px; margin-bottom:12px}
+    .swatch{width:88px; height:64px; border-radius:8px; display:flex; align-items:flex-end; justify-content:center; color:#fff; padding:6px; font-weight:600}
+    .swatch .label{font-size:0.8rem; text-shadow:0 1px 0 rgba(0,0,0,0.15)}
+    .typo-sample{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px}
+    .typo-card{padding:10px; border-radius:8px; background:linear-gradient(180deg, rgba(37,99,235,0.04), transparent)}
+    code{background:#0f172a14; padding:2px 6px; border-radius:6px}
+    .wireframes{display:flex; gap:12px; flex-wrap:wrap}
+    .wireframe{flex:1 1 300px; padding:8px; border-radius:8px; border:1px dashed #cbd5e1; background:#fff}
+    .wireframe svg{width:100%; height:auto}
+    .checks li{margin:6px 0}
+    .muted{color:var(--color-muted)}
+    a.cta{display:inline-block; padding:8px 12px; background:var(--color-primary); color:#fff; border-radius:8px; text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="logo" href="#">
+        <!-- simple SVG logo placeholder -->
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="64" height="64" rx="12" fill="#2563EB" />
+          <path d="M16 40h32M16 32h32" stroke="#fff" stroke-width="3" stroke-linecap="round" />
+        </svg>
+        <div>
+          <h1>StudyHub</h1>
+          <div class="muted" style="font-size:0.9rem">A hub for student resources, study guides, and learning tips</div>
+        </div>
+      </a>
+    </header>
+
+    <p class="lead">This site plan documents the strategy, content, visual choices, scenarios, and wireframes for the StudyHub project. The styling uses the selected color scheme and typography for preview.</p>
+
+    <section>
+      <h2>Site Name &amp; Logo</h2>
+      <p><strong>Site name:</strong> StudyHub</p>
+      <p><strong>Why this name?</strong> "StudyHub" represents a centralized location for students to access study materials, tips, and guides efficiently. Short, brandable, and professional.</p>
+      <p class="muted">Optional domain availability suggestion: <code>studyhub.org</code></p>
+    </section>
+
+    <section>
+      <h2>Site Purpose</h2>
+      <p>The website provides study guides, tutorials, tips, and a resource tracking system. Core pages include Home, Subjects, Tutorials, Notes, Tips &amp; Tricks, About, and Contact.</p>
+    </section>
+
+    <section>
+      <h2>Scenarios (Visitor Questions)</h2>
+      <ul class="scenarios">
+        <li>What resources are available for preparing for my math exam?</li>
+        <li>How can I find tips for improving my study habits?</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Color Schema</h2>
+      <p>Primary colors and usage:</p>
+      <div class="swatches">
+        <div class="swatch" style="background:var(--color-primary)"><div class="label">#2563EB<br><small>Primary - headers, CTAs</small></div></div>
+        <div class="swatch" style="background:var(--color-accent)"><div class="label">#FBBF24<br><small>Accent - highlights, notifications</small></div></div>
+        <div class="swatch" style="background:var(--color-surface); color:var(--color-text)"><div class="label">#FFFFFF<br><small>Cards / surfaces</small></div></div>
+      </div>
+      <ul>
+        <li><strong>Primary</strong> — headers, links, buttons</li>
+        <li><strong>Accent</strong> — highlights, notifications</li>
+        <li><strong>Neutral text &amp; backgrounds</strong> — page, cards, paragraphs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <ol>
+        <li><strong>Merriweather</strong> — headings, site title</li>
+        <li><strong>Roboto</strong> — body text, UI elements</li>
+      </ol>
+      <div class="typo-sample">
+        <div class="typo-card">
+          <div style="font-family:'Merriweather', serif; font-size:20px;">Heading example — H2</div>
+          <div class="muted" style="font-size:13px">Merriweather, 700 — headings</div>
+        </div>
+        <div class="typo-card">
+          <div style="font-family:'Roboto', sans-serif; font-size:15px">Body text example — Roboto. Learn efficiently with structured resources and notes.</div>
+          <div class="muted" style="font-size:13px">Roboto, 400 — body/UI</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Wireframe — Home Page</h2>
+      <p>Low-fidelity wireframes for mobile and desktop layouts.</p>
+      <div class="wireframes">
+        <div class="wireframe">
+          <strong>Mobile (320–420px)</strong>
+          <svg viewBox="0 0 320 640" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="308" height="628" rx="12" fill="#fff" stroke="#e2e8f0"/>
+            <rect x="18" y="18" width="284" height="44" rx="6" fill="#f1f5f9" />
+            <rect x="18" y="72" width="284" height="112" rx="8" fill="#f1f5f9" />
+            <rect x="18" y="196" width="90" height="60" rx="8" fill="#f1f5f9" />
+            <rect x="118" y="196" width="90" height="60" rx="8" fill="#f1f5f9" />
+            <rect x="218" y="196" width="84" height="60" rx="8" fill="#f1f5f9" />
+            <rect x="18" y="276" width="284" height="120" rx="8" fill="#f8fafc" />
+            <rect x="18" y="406" width="284" height="120" rx="8" fill="#f8fafc" />
+            <rect x="18" y="536" width="284" height="56" rx="8" fill="#f1f5f9" />
+          </svg>
+        </div>
+        <div class="wireframe">
+          <strong>Desktop / Wide</strong>
+          <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="748" height="408" rx="12" fill="#fff" stroke="#e2e8f0"/>
+            <rect x="18" y="18" width="712" height="80" rx="8" fill="#f1f5f9" />
+            <rect x="18" y="110" width="432" height="220" rx="8" fill="#f8fafc" />
+            <rect x="462" y="110" width="268" height="220" rx="8" fill="#f8fafc" />
+            <rect x="18" y="344" width="712" height="54" rx="8" fill="#f1f5f9" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>CSS &amp; Implementation Notes</h2>
+      <ul>
+        <li>Use semantic HTML: &lt;header&gt;, &lt;main&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;footer&gt;</li>
+        <li>Responsive layout: mobile-first, CSS Grid/Flexbox for cards</li>
+        <li>Optimize images (WebP, lazy-loading) for performance</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Testing (Self-Check)</h2>
+      <ol class="checks">
+        <li>HTML validation (W3C)</li>
+        <li>Accessibility checks (keyboard navigation, alt text)</li>
+        <li>Color contrast checks (WCAG AA)</li>
+        <li>Performance testing (Lighthouse)</li>
+        <li>SEO checks (titles, meta descriptions, headings)</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Next Steps / To-Do</h2>
+      <ul>
+        <li>Create content for top 5 subjects</li>
+        <li>Build Home and Subject page templates</li>
+        <li>Implement search functionality and filters</li>
+      </ul>
+      <p style="margin-top:12px"><a class="cta" href="#">Start implementation</a></p>
+    </section>
+
+    <footer style="text-align:center; font-size:0.9rem; color:var(--color-muted); margin-top:6px">
+      Site plan created for class assignment — StudyHub • last updated: <strong>Nov 26, 2025</strong>
+    </footer>
+  </div>
+</body>
+</html>
