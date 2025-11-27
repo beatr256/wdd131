@@ -1,85 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Review Form</title>
-  <link rel="stylesheet" href="styles/form.css">
-  <script defer src="scripts.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 25px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 8px;
+      display: block;
+      color: #444;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #0078ff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0063d6;
+    }
+  </style>
 </head>
-
 <body>
-  <header>
-    <h1>Product Review Form</h1>
-  </header>
 
-  <main>
-    <form method="get" action="review.html">
+  <div class="container">
+    <h2>Fill Out Your Information</h2>
 
-      <!-- Product Name -->
-      <label for="product-select">Product Name</label>
-      <select id="product-select" name="product" required>
-        <option value="" disabled selected>Select a Product ...</option>
-        <!-- JS will populate other options -->
+    <form action="review.html" method="GET">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Prefer not to say</option>
       </select>
 
-      <!-- Overall Rating -->
-      <fieldset>
-        <legend>Overall Rating</legend>
-        <div class="rating">
-          <label>
-            <input type="radio" name="rating" value="1" required>
-            ★
-          </label>
-          <label>
-            <input type="radio" name="rating" value="2">
-            ★★
-          </label>
-          <label>
-            <input type="radio" name="rating" value="3">
-            ★★★
-          </label>
-          <label>
-            <input type="radio" name="rating" value="4">
-            ★★★★
-          </label>
-          <label>
-            <input type="radio" name="rating" value="5">
-            ★★★★★
-          </label>
-        </div>
-      </fieldset>
+      <label for="message">Additional Message</label>
+      <textarea id="message" name="message" rows="5"></textarea>
 
-      <!-- Date of Installation -->
-      <label for="install-date">Date of Installation</label>
-      <input type="date" id="install-date" name="installation" required>
-
-      <!-- Useful Features -->
-      <fieldset>
-        <legend>Useful Features (check all that apply)</legend>
-
-        <label><input type="checkbox" name="features" value="easy-install"> Easy Install</label>
-        <label><input type="checkbox" name="features" value="durable"> Durable</label>
-        <label><input type="checkbox" name="features" value="high-performance"> High Performance</label>
-        <label><input type="checkbox" name="features" value="lightweight"> Lightweight</label>
-      </fieldset>
-
-      <!-- Written Review -->
-      <label for="review-text">Written Review</label>
-      <textarea id="review-text" name="review" rows="4"></textarea>
-
-      <!-- User Name -->
-      <label for="username">Your Name (optional)</label>
-      <input type="text" id="username" name="username">
-
-      <!-- Submit -->
-      <input type="submit" value="Submit Review">
-
+      <button type="submit">Review My Info</button>
     </form>
-  </main>
+  </div>
 
-  <footer>
-    <p>© 2025 Hellen Beatrice Apolot  — WDD Assignment</p>
-  </footer>
 </body>
 </html>
