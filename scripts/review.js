@@ -1,18 +1,17 @@
-// Read query params
 const params = new URLSearchParams(window.location.search);
-const summaryList = document.getElementById("summary");
 
-// Convert all form data into a summary list
+const list = document.getElementById("summary");
+
 params.forEach((value, key) => {
   const li = document.createElement("li");
   li.textContent = `${key}: ${value}`;
-  summaryList.appendChild(li);
+  list.appendChild(li);
 });
 
-// Handle review counter
+// Review count tracker
 let count = Number(localStorage.getItem("reviewCount")) || 0;
 count++;
 localStorage.setItem("reviewCount", count);
 
 document.getElementById("counter").textContent =
-  `You have submitted ${count} review(s).`;
+  `Total reviews submitted: ${count}`;

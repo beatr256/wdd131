@@ -1,88 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Review Information</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #eef3f7;
-      margin: 0;
-      padding: 0;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product Review Summary Page for WDD Assignment.">
+  <meta name="author" content="Hellen Beatrice Apolot">
+  <title>Product Review Summary</title>
 
-    .container {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 25px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      text-align: center;
-      color: #222;
-      margin-bottom: 25px;
-    }
-
-    .info-box {
-      background: #f7f9fb;
-      border-left: 5px solid #0078ff;
-      padding: 15px;
-      border-radius: 6px;
-      margin-bottom: 18px;
-    }
-
-    p {
-      margin: 5px 0;
-      font-size: 16px;
-      color: #333;
-    }
-
-    .button {
-      display: block;
-      width: 100%;
-      padding: 14px;
-      background: #0078ff;
-      color: white;
-      border-radius: 6px;
-      text-align: center;
-      text-decoration: none;
-      margin-top: 20px;
-    }
-
-    .button:hover {
-      background: #005fcc;
-    }
-  </style>
+  <link rel="stylesheet" href="styles/form.css">
+  <script defer src="scripts/review.js"></script>
 </head>
+
 <body>
+  <header>
+    <h1>Review Summary</h1>
+  </header>
 
-  <div class="container">
-    <h2>Review Your Information</h2>
+  <main>
+    <ul id="summary"></ul>
+    <p id="counter"></p>
+  </main>
 
-    <div class="info-box">
-      <p><strong>Full Name:</strong> <span id="name"></span></p>
-      <p><strong>Email:</strong> <span id="email"></span></p>
-      <p><strong>Age:</strong> <span id="age"></span></p>
-      <p><strong>Gender:</strong> <span id="gender"></span></p>
-      <p><strong>Message:</strong> <span id="message"></span></p>
-    </div>
-
-    <a class="button" href="form.html">Go Back & Edit</a>
-  </div>
-
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-
-    document.getElementById("name").textContent = urlParams.get("fullname");
-    document.getElementById("email").textContent = urlParams.get("email");
-    document.getElementById("age").textContent = urlParams.get("age");
-    document.getElementById("gender").textContent = urlParams.get("gender");
-    document.getElementById("message").textContent = urlParams.get("message");
-  </script>
+  <footer>
+    <p>© 2025 Hellen Beatrice Apolot — WDD Assignment</p>
+  </footer>
 
 </body>
 </html>
