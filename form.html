@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Product Review Form</h1>
+  </header>
+
+  <main>
+    <form method="get" action="review.html">
+
+      <!-- Product Name -->
+      <label for="product-select">Product Name</label>
+      <select id="product-select" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+        <!-- JS will populate other options -->
+      </select>
+
+      <!-- Overall Rating -->
+      <fieldset>
+        <legend>Overall Rating</legend>
+        <div class="rating">
+          <label>
+            <input type="radio" name="rating" value="1" required>
+            ★
+          </label>
+          <label>
+            <input type="radio" name="rating" value="2">
+            ★★
+          </label>
+          <label>
+            <input type="radio" name="rating" value="3">
+            ★★★
+          </label>
+          <label>
+            <input type="radio" name="rating" value="4">
+            ★★★★
+          </label>
+          <label>
+            <input type="radio" name="rating" value="5">
+            ★★★★★
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <label for="install-date">Date of Installation</label>
+      <input type="date" id="install-date" name="installation" required>
+
+      <!-- Useful Features -->
+      <fieldset>
+        <legend>Useful Features (check all that apply)</legend>
+
+        <label><input type="checkbox" name="features" value="easy-install"> Easy Install</label>
+        <label><input type="checkbox" name="features" value="durable"> Durable</label>
+        <label><input type="checkbox" name="features" value="high-performance"> High Performance</label>
+        <label><input type="checkbox" name="features" value="lightweight"> Lightweight</label>
+      </fieldset>
+
+      <!-- Written Review -->
+      <label for="review-text">Written Review</label>
+      <textarea id="review-text" name="review" rows="4"></textarea>
+
+      <!-- User Name -->
+      <label for="username">Your Name (optional)</label>
+      <input type="text" id="username" name="username">
+
+      <!-- Submit -->
+      <input type="submit" value="Submit Review">
+
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Hellen Beatrice Apolot  — WDD Assignment</p>
+  </footer>
+</body>
+</html>
