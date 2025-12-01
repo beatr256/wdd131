@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="content.html">Content</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Contact Us</h1>
+            <form id="contactForm">
+                <label for="nameInput">Name:</label>
+                <input type="text" id="nameInput" required>
+
+                <label for="emailInput">Email:</label>
+                <input type="email" id="emailInput" required>
+
+                <label for="messageInput">Message:</label>
+                <textarea id="messageInput" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="thankYouMessage"></div>
+        </section>
+
+        <section>
+            <h2>Saved Submissions</h2>
+            <ul id="submissionList"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Project Website | <a href="references.html">References</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
